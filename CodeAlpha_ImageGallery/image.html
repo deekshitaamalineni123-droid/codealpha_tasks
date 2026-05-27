@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Creative Image Gallery</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Top Gradient Line -->
+
+  <div class="top-line"></div>
+
+  <!-- Header -->
+
+  <section class="header">
+
+    <h1>
+      Image  Gallery
+    </h1>
+
+  </section>
+
+  <!-- Main Gallery -->
+
+  <section class="main-gallery">
+
+    <div class="gallery-item">
+      <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70">
+    </div>
+
+    <div class="gallery-item">
+      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb">
+    </div>
+
+    <div class="gallery-item">
+      <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e">
+    </div>
+
+    <div class="gallery-item">
+      <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+    </div>
+
+    <div class="gallery-item">
+      <img src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e">
+    </div>
+
+    <div class="gallery-item">
+      <img src="https://images.unsplash.com/photo-1494526585095-c41746248156">
+    </div>
+
+    <div class="gallery-item">
+      <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e">
+    </div>
+
+  </section>
+
+  <!-- Tags Section -->
+
+  <section class="tags-section">
+
+    <h2>Photo Gallery with tags</h2>
+
+    <div class="buttons">
+
+      <button onclick="filterGallery('all')">All</button>
+
+      <button onclick="filterGallery('beautiful')">
+        Beautiful
+      </button>
+
+      <button onclick="filterGallery('creative')">
+        Creative
+      </button>
+
+      <button onclick="filterGallery('cool')">
+        Cool
+      </button>
+
+      <button onclick="filterGallery('awesome')">
+        Awesome
+      </button>
+
+    </div>
+
+  </section>
+
+  <!-- Tagged Gallery -->
+
+  <section class="tag-gallery">
+
+    <div class="photo beautiful">
+      <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b">
+    </div>
+
+    <div class="photo creative">
+      <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a">
+    </div>
+
+    <div class="photo cool">
+      <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429">
+    </div>
+
+    <div class="photo awesome">
+      <img src="https://images.unsplash.com/photo-1482192505345-5655af888cc4">
+    </div>
+
+  </section>
+
+  <!-- Lightbox -->
+
+  <div class="lightbox" id="lightbox">
+
+    <span class="close">&times;</span>
+
+    <img id="lightbox-image">
+
+    <!-- Navigation Buttons -->
+
+<button class="nav-btn prev">&#10094;</button>
+
+<button class="nav-btn next">&#10095;</button>
+
+<!-- Editing Tools -->
+
+<div class="tools">
+
+  <button onclick="applyFilter('grayscale(100%)')">
+    Black & White
+  </button>
+
+  <button onclick="applyFilter('sepia(100%)')">
+    Vintage
+  </button>
+
+  <button onclick="applyFilter('contrast(180%)')">
+    Contrast
+  </button>
+
+  <button onclick="applyFilter('brightness(130%)')">
+    Bright
+  </button>
+
+  <button onclick="applyFilter('blur(1px)')">
+    Blur
+  </button>
+
+  <button onclick="applyFilter('none')">
+    Reset
+  </button>
+
+</div>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
