@@ -1,0 +1,207 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: #0b0d14;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Poppins', sans-serif;
+}
+
+.calculator {
+    width: 370px;
+
+    background: #0b0d14;
+
+    padding: 25px;
+
+    border-radius: 35px;
+}
+
+
+/* DISPLAY AREA */
+
+.display-area {
+
+    height: 220px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    margin-bottom: 20px;
+
+    overflow: hidden;
+}
+
+
+/* PREVIOUS OPERATION */
+
+.previous-operation {
+
+    color: rgba(255, 255, 255, 0.5);
+
+    font-size: 1.6rem;
+
+    margin-bottom: 10px;
+
+    min-height: 30px;
+}
+
+
+/* MAIN DISPLAY */
+
+#display {
+
+    width: 100%;
+
+    background: transparent;
+
+    color: white;
+
+    text-align: right;
+
+    font-size: 4rem;
+
+    font-weight: 400;
+
+    border: none;
+
+    outline: none;
+
+    overflow-x: auto;
+
+    overflow-y: hidden;
+
+    white-space: nowrap;
+
+    padding: 0;
+
+    scrollbar-width: none;
+
+    scroll-behavior: smooth;
+}
+
+
+/* HIDE SCROLLBAR */
+
+#display::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* BUTTONS */
+
+.buttons {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px;
+}
+
+
+.btn {
+
+    width: 75px;
+    height: 75px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: linear-gradient(145deg, #2f3138, #17191f);
+
+    color: white;
+
+    font-size: 1.9rem;
+
+    cursor: pointer;
+
+    box-shadow:
+        8px 8px 18px rgba(0, 0, 0, 0.6),
+        -3px -3px 10px rgba(255, 255, 255, 0.04);
+
+    transition: all 0.25s ease;
+}
+
+
+/* BUTTON HOVER */
+
+.btn:hover {
+    transform: scale(1.06);
+}
+
+
+/* BUTTON CLICK */
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+
+/* OPERATORS */
+
+.operator {
+    font-size: 2rem;
+}
+
+
+/* FUNCTION BUTTONS */
+
+.function {
+
+    font-size: 1.5rem;
+
+    font-weight: 600;
+}
+
+
+/* EQUAL BUTTON */
+
+.equal {
+
+    background: linear-gradient(145deg, #f1b497, #de9672);
+
+    color: white;
+}
+
+.equal:hover {
+    transform: scale(1.08);
+}
+
+
+/* RESPONSIVE DESIGN */
+
+@media(max-width: 420px) {
+
+    .calculator {
+
+        width: 100%;
+
+        padding: 20px;
+    }
+
+    .btn {
+
+        width: 70px;
+
+        height: 70px;
+
+        font-size: 1.6rem;
+    }
+
+    #display {
+
+        font-size: 4.5rem;
+    }
+}
